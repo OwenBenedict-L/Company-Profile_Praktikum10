@@ -1,0 +1,43 @@
+.header:global(.card-header) {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0;
+  padding: 0.6rem 1rem;
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.misi {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.misi li {
+  padding-left: 0.25rem;
+}
+
+.misi li + li {
+  margin-top: 0.4rem;
+}
+
+.misi li::marker {
+  color: var(--mauve);
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .header:global(.card-header) {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.25rem;
+  }
+
+  .misi {
+    padding-left: 1.25rem;
+  }
+
+  .misi li + li {
+    margin-top: 0.5rem;
+  }
+}

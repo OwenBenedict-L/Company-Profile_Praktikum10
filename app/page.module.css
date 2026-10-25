@@ -1,0 +1,152 @@
+.hero {
+  display: flex;
+  align-items: center;
+  padding: 2.5rem 0 3.5rem;
+  color: #f6f4fa;
+  background-color: var(--slate-dark);
+  background-image: linear-gradient(
+    180deg,
+    #36435a 0%,
+    #4f5f78 45%,
+    #7a6c7e 78%,
+    #d9a98a 96%,
+    #f2d3b3 100%
+  );
+
+  --btn-bg: #f2d3b3;
+  --btn-hover-bg: #f8e3cb;
+  --btn-active-bg: #e8c39a;
+  --btn-color: #2f3a4d;
+  --outline: #f6f4fa;
+  --outline-hover: rgba(255, 255, 255, 0.14);
+}
+
+.content {
+  animation: rise 0.7s ease both;
+}
+
+.heroTitle {
+  font-size: clamp(2rem, 8vw, 4.25rem);
+  line-height: 1.1;
+  color: #f6f4fa;
+}
+
+.motto {
+  max-width: 34rem;
+  margin-top: 0.75rem;
+  margin-bottom: 1.5rem;
+  font-size: clamp(1rem, 2.4vw, 1.4rem);
+  line-height: 1.5;
+  color: #f6dfc6;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.6rem;
+  max-width: 20rem;
+  margin: 0 auto 1.5rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.15rem;
+  padding: 0.65rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 0.75rem;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.statLabel {
+  font-size: 0.8125rem;
+  line-height: 1.25;
+  color: #f6dfc6;
+}
+
+.statValue {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #fff;
+  overflow-wrap: anywhere;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 20rem;
+  margin: 0 auto;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    min-height: 70vh;
+    padding: 3rem 0 4rem;
+  }
+
+  .stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    max-width: 44rem;
+    margin-bottom: 2rem;
+  }
+
+  .stat {
+    gap: 0.35rem;
+    padding: 1rem 0.75rem;
+  }
+
+  .statLabel {
+    font-size: 0.9375rem;
+  }
+
+  .statValue {
+    font-size: 1.5rem;
+  }
+
+  .actions {
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.75rem;
+    max-width: none;
+  }
+
+  .actions :global(.btn) {
+    --bs-btn-padding-y: 0.65rem;
+    --bs-btn-padding-x: 1.5rem;
+    --bs-btn-font-size: 1.0625rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero {
+    min-height: 75vh;
+  }
+
+  .stats {
+    max-width: 48rem;
+  }
+
+  .statLabel {
+    font-size: 1rem;
+  }
+
+  .statValue {
+    font-size: 1.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .content {
+    animation: none;
+  }
+}

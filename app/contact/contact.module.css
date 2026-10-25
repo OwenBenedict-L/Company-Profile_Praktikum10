@@ -1,0 +1,147 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem 0.75rem;
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  min-width: 0;
+  color: var(--slate-dark);
+  text-decoration: none;
+}
+
+.item:hover {
+  color: var(--slate-dark);
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 2.1875rem;
+  height: 2.1875rem;
+  border-radius: 50%;
+  font-size: 0.95rem;
+  color: #9a6a3a;
+  background-color: #fbeedd;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-width: 0;
+  line-height: 1.3;
+}
+
+.name {
+  display: block;
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.detail {
+  display: block;
+  padding-left: 0.25rem;
+  font-size: 0.75rem;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+
+.item:hover .detail {
+  color: var(--slate-dark);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, max-content);
+    justify-content: center;
+    gap: 2rem 3rem;
+  }
+
+  .item {
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .icon {
+    width: 4.1875rem;
+    height: 4.1875rem;
+    font-size: 1.7rem;
+  }
+
+  .name {
+    font-size: 1.25rem;
+  }
+
+  .detail {
+    padding-left: 1rem;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .grid {
+    gap: 2.5rem 5rem;
+  }
+
+  .icon {
+    width: 4.6875rem;
+    height: 4.6875rem;
+    font-size: 1.9rem;
+  }
+
+  .name {
+    font-size: 1.35rem;
+  }
+
+  .detail {
+    padding-left: 1.25rem;
+    font-size: 1.05rem;
+  }
+}
+
+.item:nth-child(1):hover .icon {
+  color: var(--slate-dark);
+  background-color: var(--peach);
+}
+
+.item:nth-child(2) .icon {
+  color: var(--slate);
+  background-color: #e3e8f0;
+}
+.item:nth-child(2):hover .icon {
+  color: #fff;
+  background-color: var(--slate);
+}
+
+.item:nth-child(3) .icon {
+  color: #7a5f6c;
+  background-color: #efe6ea;
+}
+.item:nth-child(3):hover .icon {
+  color: #fff;
+  background-color: var(--mauve);
+}
+
+.item:nth-child(4) .icon {
+  color: var(--slate);
+  background-color: var(--lavender);
+}
+.item:nth-child(4):hover .icon {
+  color: #fff;
+  background-color: var(--slate-dark);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .icon {
+    transition: none;
+  }
+}

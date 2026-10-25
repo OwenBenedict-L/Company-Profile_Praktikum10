@@ -1,0 +1,114 @@
+.navBar:global(.navbar) {
+  --bs-navbar-padding-y: 0.4rem;
+  background-color: #fcfcfe;
+  border-bottom: 1px solid var(--line);
+}
+
+.navBrand:global(.navbar-brand) {
+  --bs-navbar-brand-color: var(--slate-dark);
+  --bs-navbar-brand-hover-color: var(--slate);
+  --bs-navbar-brand-padding-y: 0.25rem;
+  margin-right: 0;
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+}
+
+.toggle:global(.navbar-toggler) {
+  --bs-navbar-toggler-padding-y: 0.2rem;
+  --bs-navbar-toggler-padding-x: 0.5rem;
+  --bs-navbar-toggler-font-size: 1rem;
+  --bs-navbar-toggler-border-color: var(--line);
+  --bs-navbar-toggler-focus-width: 0.2rem;
+}
+
+.menu {
+  padding: 0.25rem 0 0.5rem;
+}
+
+.navLink {
+  --bs-nav-link-color: #55627a;
+  --bs-nav-link-hover-color: var(--slate-dark);
+  --bs-nav-link-padding-y: 0.35rem;
+  position: relative;
+  width: fit-content;
+  font-size: 0.9375rem;
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.1rem;
+  height: 2px;
+  background-color: var(--peach-deep);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.navLink:hover::after,
+.navLink:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.navLink:global(.nav-link):focus-visible {
+  box-shadow: none;
+  outline: 2px solid var(--slate);
+  outline-offset: 2px;
+  border-radius: 0.25rem;
+}
+
+.linkActive {
+  --bs-nav-link-color: var(--slate-dark);
+  --bs-nav-link-hover-color: var(--slate-dark);
+  font-weight: 600;
+}
+
+.linkActive::after {
+  transform: scaleX(1);
+}
+
+@media (min-width: 768px) {
+  .navBrand:global(.navbar-brand) {
+    font-size: 1.35rem;
+  }
+
+  .navLink {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .navBar:global(.navbar) {
+    --bs-navbar-padding-y: 0.5rem;
+  }
+
+  .menu {
+    padding: 0;
+  }
+
+  .navLink {
+    --bs-nav-link-padding-y: 0.5rem;
+    width: auto;
+  }
+
+  .navLink::after {
+    left: 0.5rem;
+    right: 0.5rem;
+    bottom: 0.2rem;
+  }
+
+  .navLink:global(.nav-link):focus-visible {
+    outline-offset: -2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navLink::after {
+    transition: none;
+  }
+}
