@@ -39,10 +39,11 @@ const breakable = (text: string) => text.replace(/(\w)@/, "$1@\u200b");
 
 export default function ContactPage() {
   return (
-    <Container className="py-4 py-md-5 page">
-      <h1 className="mb-2 title">Hubungi Kami</h1>
-      <p className="text-secondary mb-4">
-        Pilih saluran yang paling nyaman untukmu. Kami membalas pada jam kerja.
+    <Container className="py-4 py-md-4 page">
+      <h1 className="mb-2 title text-center">Contact Us</h1>
+      <p className="text-secondary mb-4 text-center">
+        For business partnership or collaboration <br />
+        can be through our social media:
       </p>
 
       <div className={styles.grid}>

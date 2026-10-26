@@ -8,7 +8,7 @@ import styles from "./footer.module.css";
 
 export default function Footer() {
   return (
-    <footer className={`${styles.footer} mt-auto pt-3 pt-md-4 pb-2`}>
+    <footer className={`${styles.footer} mt-auto pt-3 pb-2`}>
       <Container>
         <Row className="g-3 g-md-4 justify-content-between">
           <Col md="auto">
@@ -19,7 +19,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Lihat di Google Maps
+              Check on Google Maps
             </a>
           </Col>
           <Col md="auto">
@@ -41,8 +41,7 @@ export default function Footer() {
         </Row>
         <hr className="my-3 my-md-4" />
         <p className="text-center text-secondary small mb-0">
-          &copy; {new Date().getFullYear()} {company.name}. Hak cipta
-          dilindungi undang-undang.
+          &copy;2026 {company.name}. 
         </p>
       </Container>
     </footer>

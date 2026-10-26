@@ -23,43 +23,43 @@ type NewsItem = {
 const newsData: NewsItem[] = [
   {
     id: 1,
-    title: "Peresmian kantor cabang baru di Surabaya",
-    date: "12 Oktober 2026",
-    category: "Perusahaan",
+    title: "Update: New Feature Will Be Added In App",
+    date: "12 July 2026",
+    category: "Update",
     excerpt:
-      "Kantor cabang Surabaya resmi dibuka untuk melayani mitra di wilayah Jawa Timur dengan layanan lebih cepat.",
+      "We have many new updates waiting to be publish soon in August! Stay toon!!",
   },
   {
     id: 2,
-    title: "Peluncuran layanan pelanggan 24 jam",
-    date: "28 September 2026",
-    category: "Layanan",
+    title: "Open For Hiring!!",
+    date: "28 April 2026",
+    category: "Open Hire",
     excerpt:
-      "Tim customer service kini siap membantu setiap hari melalui WhatsApp dan email tanpa jeda.",
+      "Our teams has finally opened a chance for talented candidate to join us!! Will only be available until the end of May.",
   },
   {
     id: 3,
-    title: "Kerja sama strategis dengan mitra regional",
-    date: "9 September 2026",
-    category: "Kemitraan",
+    title: "Fix: Bugs in Our Website",
+    date: "25 February 2026",
+    category: "Update",
     excerpt:
-      "Kolaborasi baru ini memperluas jangkauan distribusi ke tiga provinsi tambahan.",
+      "There is a bug in our website where customer is unable to access the contact provided by website.",
   },
   {
     id: 4,
-    title: "Program pelatihan karyawan semester kedua",
-    date: "15 Agustus 2026",
-    category: "Perusahaan",
+    title: "Our App Finally Reach Its Final Developments",
+    date: "15 February 2026",
+    category: "Devlog",
     excerpt:
-      "Lebih dari seratus karyawan mengikuti pelatihan keterampilan teknis dan kepemimpinan.",
+      "Our App finally is able to go into the world and a new challenges will waiting for us!",
   },
   {
     id: 5,
-    title: "Kegiatan bakti sosial bersama masyarakat sekitar",
-    date: "2 Agustus 2026",
-    category: "Sosial",
+    title: "Hello World!!",
+    date: "2 December 2025",
+    category: "Introduction",
     excerpt:
-      "Perusahaan menyalurkan bantuan perlengkapan sekolah untuk anak-anak di sekitar kantor pusat.",
+      "Hello world! This is the first log of our news!",
   },
 ];
 
@@ -80,7 +80,7 @@ export default function NewsPage() {
   return (
     <Container className="py-4 py-md-5 page">
       <div className={styles.head}>
-        <h1 className="mb-0 title">Berita</h1>
+        <h1 className="mb-0 title">News</h1>
 
         <Form
           role="search"
@@ -94,15 +94,15 @@ export default function NewsPage() {
 
             <Form.Control
               type="search"
-              placeholder="Cari judul, isi, atau kategori"
-              aria-label="Cari berita"
+              placeholder="Search title, content, or category"
+              aria-label="News search"
               className={styles.input}
               value={query}
               onChange={(e) => setQuery(e.target.value)}
             />
             {query && (
               <Button className="button-outline" onClick={() => setQuery("")}>
-                Hapus
+                Delete
               </Button>
             )}
           </InputGroup>
@@ -111,14 +111,14 @@ export default function NewsPage() {
 
       <div className={styles.count} aria-live="polite">
         <Form.Text className="text-secondary">
-          {results.length} berita ditemukan
+          {results.length} news found
         </Form.Text>
       </div>
 
       {results.length === 0 ? (
         <Alert variant="warning" className={styles.notice}>
-          Tidak ada berita yang cocok dengan &quot;{query}&quot;. Coba kata
-          kunci lain.
+          No matching query &quot;{query}&quot;. 
+          Try another keyword.
         </Alert>
       ) : (
         <Row xs={1} md={2} lg={3} className="gx-3 gx-md-4 gy-5">

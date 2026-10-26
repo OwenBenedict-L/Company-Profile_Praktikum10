@@ -10,23 +10,23 @@ import styles from "./history.module.css";
 export default function HistoryPage() {
   return (
     <Container className="py-4 py-md-5 page">
-      <h1 className="mb-3 mb-md-4 title">Sejarah</h1>
+      <h1 className="mb-3 mb-md-4 title text-center">History</h1>
 
       <Row className="g-3 g-md-4 align-items-center">
         <Col xs={12} md={6}>
-          <h2 className={styles.heading}>Perjalanan {company.name}</h2>
-          <p className="text-secondary mb-3">Sejak 2015</p>
+          <h2 className={styles.heading}>{company.name}&apos;s Journey</h2>
           <p>
-            {company.name} berdiri pada tahun 2015 sebagai usaha kecil dengan
-            tim beranggotakan lima orang. Berkat kepercayaan pelanggan, kami
-            tumbuh bertahap: membuka kantor pertama di Jakarta, memperluas
-            layanan ke berbagai kota, dan kini melayani ratusan mitra bisnis di
-            seluruh Indonesia.
+            {company.name} was founded in 2025 by 5 persons as a side project 
+            made for giving a new experince for people to enjoyed music without
+            any hassle. Then the project started to get bigger and our teams also
+            getting more larger, making {company.name} finally came into the
+            industry.
+
           </p>
           <p className="mb-0">
-            Sampai hari ini, kami tetap memegang prinsip yang sama sejak awal:
-            bekerja jujur, menjaga kualitas, dan mengutamakan hubungan jangka
-            panjang.
+            Until this day, we&apos;re still holding to our principle, to give
+            people experience for them to fully enjoyed without any disturbance.
+            And we still keep this going until never.
           </p>
         </Col>
 
@@ -34,7 +34,7 @@ export default function HistoryPage() {
           <div className={`ratio ratio-4x3 ${styles.photo}`}>
             <Image
               src="/images/history.jpg"
-              alt={`Perjalanan ${company.name} sejak 2015`}
+              alt={`${company.name} journey`}
               fill
               sizes="(min-width: 768px) 50vw, 100vw"
               style={{ objectFit: "cover" }}

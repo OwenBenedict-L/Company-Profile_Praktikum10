@@ -152,3 +152,28 @@ h1, h2, h3, h4, h5, h6,
     transform: none;
   }
 }
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: -20%;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(40% 35% at 20% 25%, rgba(242, 211, 179, 0.55), transparent 70%),
+    radial-gradient(35% 30% at 80% 20%, rgba(231, 231, 241, 0.9), transparent 70%),
+    radial-gradient(45% 40% at 60% 85%, rgba(138, 114, 126, 0.16), transparent 70%);
+  animation: drift 24s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@keyframes drift {
+  from { transform: translate3d(0, 0, 0) scale(1); }
+  to { transform: translate3d(4%, 3%, 0) scale(1.08); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before {
+    animation: none;
+  }
+}

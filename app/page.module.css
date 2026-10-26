@@ -74,6 +74,14 @@
   overflow-wrap: anywhere;
 }
 
+.stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
 .actions {
   display: flex;
   flex-direction: column;

@@ -9,20 +9,20 @@
   font-size: 1.05rem;
 }
 
-.misi {
+.mission {
   margin: 0;
   padding-left: 1.1rem;
 }
 
-.misi li {
+.mission li {
   padding-left: 0.25rem;
 }
 
-.misi li + li {
+.mission li + li {
   margin-top: 0.4rem;
 }
 
-.misi li::marker {
+.mission li::marker {
   color: var(--mauve);
   font-weight: 600;
 }
@@ -33,11 +33,11 @@
     font-size: 1.25rem;
   }
 
-  .misi {
+  .mission {
     padding-left: 1.25rem;
   }
 
-  .misi li + li {
+  .mission li + li {
     margin-top: 0.5rem;
   }
 }

@@ -1,14 +1,18 @@
 .footer {
   color: #dfe3ec;
   background-color: var(--slate-dark);
-  border-top: 4px solid var(--peach-deep);
-  font-size: 0.875rem;
-  line-height: 1.5;
+  border-top: 3px solid var(--peach-deep);
+  font-size: 0.8125rem;
+  line-height: 1.45;
 }
 
 .footer h5 {
   color: #fff;
-  font-size: 1rem;
+  font-size: 0.9375rem;
+  margin-bottom: 0.4rem;
+}
+
+.footer p {
   margin-bottom: 0.25rem;
 }
 
@@ -39,12 +43,12 @@
 
 @media (min-width: 768px) {
   .footer {
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 0.875rem;
+    line-height: 1.5;
   }
 
   .footer h5 {
-    font-size: 1.15rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.35rem;
+    margin-bottom: 0.8rem;
   }
 }

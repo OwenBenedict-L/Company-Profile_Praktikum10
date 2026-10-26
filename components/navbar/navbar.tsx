@@ -36,6 +36,7 @@ export default function AppNavbar() {
           className={styles.navBrand}
           onClick={() => setExpanded(false)}
         >
+          <i className="fa-solid fa-music"></i>
           {company.name}
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="main-nav" className={styles.toggle} />
