@@ -28,7 +28,7 @@ html:root {
 
 @media (min-width: 768px) {
   html:root {
-    --bs-body-font-size: 1.0625rem;
+    --bs-body-font-size: 1rem;
     --bs-body-line-height: 1.7;
   }
 }

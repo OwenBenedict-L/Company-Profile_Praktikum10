@@ -1,7 +1,7 @@
 "use client";
 
 import Container from "react-bootstrap/Container";
-import { company } from "@/lib/company";
+import { company } from "../../lib/company";
 import styles from "./contact.module.css";
 
 const contacts = [

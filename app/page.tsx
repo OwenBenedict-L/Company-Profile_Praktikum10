@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Container from "react-bootstrap/Container";
-import { company } from "@/lib/company";
+import { company } from "../lib/company";
 import styles from "./page.module.css";
 
 const stats: { label: string; value?: string; stars?: number }[] = [

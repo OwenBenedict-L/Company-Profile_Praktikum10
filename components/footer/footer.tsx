@@ -3,7 +3,7 @@
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { company } from "@/lib/company";
+import { company } from "../../lib/company";
 import styles from "./footer.module.css";
 
 export default function Footer() {
